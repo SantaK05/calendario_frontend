@@ -20,7 +20,7 @@
     --border-test: 1px solid red;
 
     --animation-primary: all .5s cubic-bezier(.7, 0, .3, 1);
-    --animation-fast: all .3s cubic-bezier(.7, 0, .3, 1);
+    --animation-fast: all .2s cubic-bezier(.7, 0, .3, 1);
     --animation-smooth: all .7s cubic-bezier(.7, 0, .3, 1);
     --animation-slow: all .9s cubic-bezier(.7, 0, .3, 1);
 
@@ -70,6 +70,7 @@ body {
 /* ------------------------------------- */
 /* ?REUSABLE COMPONENTS? */
 /* ------------------------------------- */
+
 /* !------Headings------! */
 h1,
 h2,
@@ -111,23 +112,14 @@ button {
 }
 
 /* !------Img------! */
-span {
+svg {
     width: 100%;
     height: 100%;
 }
 
-svg {
-    width: 100%;
-    height: 100%;
-    & > g > path {
-        transform: scaleY(125%) translateY(-10%);
-        transition-property: var(--animation-fast);
-        transition-duration: 200ms;
-    }
-
-    &:hover > g > path {
-        stroke-width: 2.1;
-    }
+span {
+    width: fit-content;
+    height: fit-content;
 }
 
 /* ------------------------------------- */
@@ -139,11 +131,9 @@ svg {
     background-color: var(--color-dark-dark);
     display: grid;
     grid-template-rows: repeat(11, 1fr);
-    grid-template-columns: repeat(5, 1fr);
 
-    & > div {
-        display: block;
-        width: 100%;
+    & > section {
+        max-width: 180.4px;
     }
 }
 
@@ -157,3 +147,111 @@ svg {
     min-width: 11.5em;
 }
 
+/* ------------------------------------- */
+/* ?CALENDAR SIDE INFO? */
+/* ------------------------------------- */
+.calendar-side-info > section {
+    display: block;
+    width: 100%;
+}
+
+/* *side bar button* */
+#sb-btn {
+    & > g > path {
+        transform: scaleY(125%) translateY(-10%);
+        transition: var(--animation-fast);
+    }
+
+    &:hover > g > path {
+        stroke-width: 2.2;
+    }
+}
+
+/* *side bar calendario* */
+.sb-cal-sec {
+    grid-row: 2 / span 3;
+}
+
+.sb-btn-cal-sec {
+    display: flex;
+    justify-content: end;
+}
+
+.sb-btn-cal-container {
+    display: flex;
+    width: 50px;
+    height: 20px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-scrollUp,
+.btn-scrollDown {
+    display: block;
+    height: 20px;
+
+    .btn-svg {
+        position: relative;
+        transform: translateY(-20%);
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: .7;
+            width: 10px;
+            height: 10px;
+            transition: 300ms ease-in-out;
+        }
+    }
+
+
+    .btn-svg:hover {
+        background-color: var(--color-grey);
+    
+        svg {
+            opacity: 1;
+        }
+    }
+}
+
+.btn-scrollUp .btn-svg svg {
+    transform: translate(50%, 50%);
+}
+
+.btn-scrollDown .btn-svg svg {
+    transform: translate(50%, 50%) rotate(180deg);
+}
+
+.sb-cal-vis-sec {
+    padding: 8px 0;
+}
+
+.sb-cal-vis-sec .sb-rdp {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 9px;
+}
+
+.rdp-head {
+    width: 100%;
+    height: 100%;
+
+    .rdp-head_row {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ------------------------------------- */
+/* ?CALENDAR CONTAINER? */
+/* ------------------------------------- */
+
+
+
+/* ------------------------------------- */
+/* ?CALENDAR SIDE UTILS? */
+/* ------------------------------------- */

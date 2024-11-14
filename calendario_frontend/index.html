@@ -10,12 +10,15 @@
 
     <body>
         <main class="container">
+            <!-- !SECTION  SIDEBAR! -->
             <section class="calendar-side-info section">
-                <div class="sb-btn-sec">
+                
+                <!-- ?SECTION BTN SHOW SIDEBAR? -->
+                <section class="sb-btn-sec">
                     <div class="sb-btn-container">
                         <button type="button" class="btn-svg" id="sb-shower">
                             <span>
-                                <svg width="100px" height="100px" viewBox="-0.96 -0.96 25.92 25.92" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <svg width="100px" height="100px" viewBox="-0.96 -0.96 25.92 25.92" fill="none" xmlns="http://www.w3.org/2000/svg" id="sb-btn">
                                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.336"></g>
                                     <g id="SVGRepo_iconCarrier"> 
@@ -25,18 +28,89 @@
                             </span>
                         </button>
                     </div>
-                </div>
+                </section>
+
+                <!-- ?SECTION CALENDAR SIDEBAR? -->
+                <section class="sb-cal-sec">
+                    <div class="sb-btn-cal-sec">
+                        <div class="sb-btn-cal-container">
+                            <div class="btn-scrollUp">
+                                <button type="button" class="btn-svg" id="scrollUp">
+                                    <svg width="104px" height="104px" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#afafaf" stroke="#afafaf">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <title>arrow_up [#337]</title> 
+                                            <desc>Created with Sketch.</desc> 
+                                            <defs> </defs> 
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+                                                <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)" fill="#afafaf"> 
+                                                    <g id="icons" transform="translate(56.000000, 160.000000)"> 
+                                                        <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"> </path> 
+                                                    </g> 
+                                                </g> 
+                                            </g> 
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="btn-scrollDown">
+                                <button type="button" class="btn-svg" id="scrollDown">
+                                    <svg width="104px" height="104px" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#afafaf" stroke="#afafaf" transform="rotate(180)">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                        <g id="SVGRepo_iconCarrier"> 
+                                            <title>arrow_up [#337]</title> 
+                                            <desc>Created with Sketch.</desc> 
+                                            <defs> </defs> 
+                                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> 
+                                                <g id="Dribbble-Light-Preview" transform="translate(-260.000000, -6684.000000)" fill="#afafaf"> 
+                                                    <g id="icons" transform="translate(56.000000, 160.000000)"> 
+                                                        <path d="M223.707692,6534.63378 L223.707692,6534.63378 C224.097436,6534.22888 224.097436,6533.57338 223.707692,6533.16951 L215.444127,6524.60657 C214.66364,6523.79781 213.397472,6523.79781 212.616986,6524.60657 L204.29246,6533.23165 C203.906714,6533.6324 203.901717,6534.27962 204.282467,6534.68555 C204.671211,6535.10081 205.31179,6535.10495 205.70653,6534.69695 L213.323521,6526.80297 C213.714264,6526.39807 214.346848,6526.39807 214.737591,6526.80297 L222.294621,6534.63378 C222.684365,6535.03868 223.317949,6535.03868 223.707692,6534.63378" id="arrow_up-[#337]"> </path> 
+                                                    </g> 
+                                                </g> 
+                                            </g> 
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sb-cal-vis-sec">
+                        <div class="sb-cal-vis-container">
+                            <table class="sb-rdp">
+                                <thead class="rdp-head">
+                                    <tr class="rdp-head_row">
+                                        <th class="rdp-head_cell">Mo</th>
+                                        <th class="rdp-head_cell">Tu</th>
+                                        <th class="rdp-head_cell">We</th>
+                                        <th class="rdp-head_cell">Th</th>
+                                        <th class="rdp-head_cell">Fr</th>
+                                        <th class="rdp-head_cell">Sa</th>
+                                        <th class="rdp-head_cell">Su</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="rdp-body">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
             </section>
     
+            <!-- !SECTION  MAIN CALENDAR! -->
             <section class="calendar-container section">
     
             </section>
     
+            <!-- !SECTION  SIDEBAR UTILS! -->
             <section class="calendar-side-utils section">
     
             </section>
         </main>
-
         <script type="module" src="/main.js"></script>
     </body>
 </html>
